@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (networkInfo != null && networkInfo.getState() == NetworkInfo.State.CONNECTED)
         {
-            new Information().execute("");
+            new userinfo().execute("");
         }else
         {
             Toast.makeText(MainActivity.this,"YOU ARE OFFLINE",Toast.LENGTH_SHORT).show();
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     if (networkInfo != null && networkInfo.getState() == NetworkInfo.State.CONNECTED)
                     {
                         //Toast.makeText(MainActivity.this,"YOU ARE ONLINE",Toast.LENGTH_LONG).show();
-                        new Information().execute("");
+                        new userinfo().execute("");
                     } else
                     {
                         Toast.makeText(MainActivity.this,"YOU ARE OFFLINE",Toast.LENGTH_SHORT).show();
@@ -88,8 +88,6 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("counter", totalCount);
         editor.commit();
 
-        Log.e("counter", String.valueOf(totalCount));
-        Toast.makeText(MainActivity.this,"counter "+totalCount,Toast.LENGTH_SHORT).show();
 
     }
 
@@ -110,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public class Information extends AsyncTask<String, String, String> {
+    public class userinfo extends AsyncTask<String, String, String> {
 
         @Override
         protected String doInBackground(String... params) {
