@@ -30,7 +30,6 @@ public class profile extends AppCompatActivity {
             user_name = extras.getString("first_name")+" "+extras.getString("last_name");
             photopath = extras.getString("avatar");
 
-            // and get whatever type user account id is
         }
 
         name.setText(user_name);
@@ -39,6 +38,5 @@ public class profile extends AppCompatActivity {
 
         Picasso.with(profile.this).load(photopath).error( R.drawable.ic_launcher_foreground ).into(photo);
 
-        Log.e("email",email+" ");
     }
 }
