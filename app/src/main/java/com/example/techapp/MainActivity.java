@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                     NetworkInfo networkInfo = cm.getActiveNetworkInfo();
                     if (networkInfo != null && networkInfo.getState() == NetworkInfo.State.CONNECTED)
                     {
-                        //Toast.makeText(MainActivity.this,"YOU ARE ONLINE",Toast.LENGTH_LONG).show();
                         new userinfo().execute("");
                     } else
                     {
